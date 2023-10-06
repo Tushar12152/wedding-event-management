@@ -2,10 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Components/pages/Home/Home";
 import Root from "../Root/Root";
 import Wedding from "../Components/pages/wedding/Wedding";
-import SpecialEvent from "../Components/pages/SpecialEvent/SpecialEvent";
+
 import Register from "../Components/pages/Register/Register";
 import Login from "../Components/pages/Login/Login";
 import ViewDetail from './../Components/pages/detail/ViewDetail';
+import Purchase from "../Components/pages/Purchase/purchase";
 
 const Router =createBrowserRouter([
     {
@@ -23,8 +24,8 @@ const Router =createBrowserRouter([
                 element:<Wedding></Wedding>
             },
             {
-                path:'/specialEvent',
-                element:<SpecialEvent></SpecialEvent>
+                path:'/purchase',
+                element:<Purchase></Purchase>
             },
             {
                 path:'/register',

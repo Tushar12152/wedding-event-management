@@ -4,9 +4,9 @@ const Nav = () => {
     const navlinks=<div className="flex  gap-6">
             <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>HOME</NavLink>
 
-            <NavLink to="/wedding" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>WEDDINGS</NavLink>
+            <NavLink to="/purchase" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>YOUR PURCHASE</NavLink>
 
-            <NavLink to="/specialEvent" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>SPECIAL</NavLink>
+            <NavLink to="/wedding" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>WEDDINGS</NavLink>
 
             <NavLink to="/register" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>REGISTER</NavLink>
 
