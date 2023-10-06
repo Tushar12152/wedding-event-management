@@ -5,6 +5,7 @@ import Wedding from "../Components/pages/wedding/Wedding";
 import SpecialEvent from "../Components/pages/SpecialEvent/SpecialEvent";
 import Register from "../Components/pages/Register/Register";
 import Login from "../Components/pages/Login/Login";
+import ViewDetail from './../Components/pages/detail/ViewDetail';
 
 const Router =createBrowserRouter([
     {
@@ -13,7 +14,9 @@ const Router =createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader:()=>fetch('/service.json')
+
             },
             {
                 path:'/wedding',
@@ -30,6 +33,12 @@ const Router =createBrowserRouter([
             {
                 path:"/login",
                 element:<Login></Login>
+            },
+            {
+                path:'/detail/:id',
+                element:<ViewDetail></ViewDetail>,
+                loader:()=>fetch('/service.json')
+
             }
 
         ]
