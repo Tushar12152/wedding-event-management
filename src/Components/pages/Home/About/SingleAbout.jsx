@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 const SingleAbout = ({about}) => {
-    console.log(about)
+    // console.log(about)
     const {img,name,position}=about;
     return (
         <div data-aos="flip-left"

@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import useContextApiHook from "../../../Custom Hooks/useContextApiHook";
 import { FcGoogle } from 'react-icons/fc';
 import {FaGithub } from 'react-icons/fa';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -54,6 +55,9 @@ const handlePopUp=(item)=>{
 
     return (
         <div>
+           <Helmet>
+             <title>Login</title>
+          </Helmet>
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col ">
     <div className="text-center">

@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import swal from 'sweetalert';
 import useContextApiHook from './../../../Custom Hooks/useContextApiHook';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const [showPassword,setShowPassword]=useState(true)
@@ -34,6 +35,9 @@ const Register = () => {
 
     return (
         <div>
+          <Helmet>
+             <title>Register</title>
+          </Helmet>
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col ">
     <div className="text-center">

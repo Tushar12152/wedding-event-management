@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
+
 const PurchaseCard = ({detail}) => {
-    console.log(detail)
+    // console.log(detail)
    
     const{img,price,name,title,short_description}=detail
     return (
         <div className='w-[80%] mx-auto mt-7'>
+            
             <div className="card lg:w-96 w-[90%] mx-auto lg:mx-0 bg-base-100 shadow-xl">
   <figure><img className='w-full h-[300px]' src={img} alt="Shoes" /></figure>
   <div className="card-body">

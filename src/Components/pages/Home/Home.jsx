@@ -4,6 +4,7 @@ import Service from "./Service";
 import Footer from "../../footer/Footer";
 import About from "./About/About";
 import Gallary from "../../Gallary/Gallary";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -11,6 +12,9 @@ const Home = () => {
     // console.log(services)
     return (
         <div>
+             <Helmet>
+             <title>Home</title>
+          </Helmet>
             <Banner></Banner>
                <h1 className="text-center font-bold text-4xl  py-20">Our Services</h1>
                <div className="w-[95%] mx-auto gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

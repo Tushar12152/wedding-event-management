@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "image_url": "https://i.ibb.co/kxvZXBn/download.jpg",
+        "wedding_category": "Outdoor"
+    },
+    {
+        "id": 2,
+        "image_url": "https://i.ibb.co/bFFKmGV/images.jpg",
+        "wedding_category": "Indoor"
+    },
+    {
+        "id": 3,
+        "image_url": "https://i.ibb.co/NyrKLmx/images.jpg",
+        "wedding_category": "Beach"
+    },
+    {
+        "id": 4,
+        "image_url": "https://i.ibb.co/nw435qr/download.jpg",
+        "wedding_category": "Vintage"
+    },
+    {
+        "id": 5,
+        "image_url": "https://i.ibb.co/B2KNwjF/download.jpg",
+        "wedding_category": "Traditional"
+    },
+    {
+        "id": 6,
+        "image_url": "https://i.ibb.co/Q6z71Ld/download.jpg",
+        "wedding_category": "Destination"
+    },
+    {
+        "id": 7,
+        "image_url": "https://i.ibb.co/7JN8w9y/download.jpg",
+        "wedding_category": "Modern"
+    },
+    {
+        "id": 8,
+        "image_url": "https://i.ibb.co/5h9kqvd/download.jpg",
+        "wedding_category": "Rustic"
+    },
+    {
+        "id": 9,
+        "image_url": "https://i.ibb.co/Q6dT6Bn/download.jpg",
+        "wedding_category": "Garden"
+    },
+    {
+        "id": 10,
+        "image_url": "https://i.ibb.co/WfzfgFD/images.jpg",
+        "wedding_category": "Boho"
+    },
+    {
+        "id": 11,
+        "image_url": "https://i.ibb.co/8B24DcB/download.jpg",
+        "wedding_category": "City"
+    },
+    {
+        "id": 12,
+        "image_url": "https://i.ibb.co/sqfh9dr/download.jpg",
+        "wedding_category": "Country"
+    }
+]

@@ -26,7 +26,8 @@ const Router =createBrowserRouter([
                 path:'/wedding',
                 element:<PrivateRoute>
                             <Wedding></Wedding>
-                      </PrivateRoute>
+                      </PrivateRoute>,
+                loader:()=>fetch('/wedding.json')
             },
             {
                 path:'/purchase',
