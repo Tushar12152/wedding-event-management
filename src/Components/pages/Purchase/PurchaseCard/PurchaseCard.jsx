@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 const PurchaseCard = ({detail}) => {
+    console.log(detail)
+   
     const{img,price,name,title,short_description}=detail
     return (
         <div className='w-[80%] mx-auto mt-7'>

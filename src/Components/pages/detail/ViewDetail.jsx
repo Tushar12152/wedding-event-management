@@ -9,14 +9,14 @@ const ViewDetail = () => {
     
 
     const selectedCard=services.find(service=>service.id==id)
-    console.log(selectedCard,'ll')
+    // console.log(selectedCard)
     const{img,name,title,short_description,price,}=selectedCard;
     const handlePurchase=()=>{
        
-      
+    
         const selectCart=[];
-        console.log(selectCart,'select')
-      const selectCard = JSON.parse(localStorage.getItem('cardDetails'))
+        // console.log(selectCart,'select')
+        const selectCard = JSON.parse(localStorage.getItem('cardDetails'))
       if(!selectCard){
            selectCart.push(selectedCard)
         
