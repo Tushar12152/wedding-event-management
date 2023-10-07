@@ -7,6 +7,7 @@ const Nav = () => {
   const {user,logOut}=useContextApiHook()
   
   // console.log(user)
+
  
 
   const signOut=()=>[

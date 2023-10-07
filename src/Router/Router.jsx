@@ -8,11 +8,13 @@ import Login from "../Components/pages/Login/Login";
 import ViewDetail from './../Components/pages/detail/ViewDetail';
 import Purchase from "../Components/pages/Purchase/purchase";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 const Router =createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:"/",

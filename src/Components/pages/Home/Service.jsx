@@ -6,8 +6,8 @@ const Service = ({service}) => {
     const{id,img,name,title,short_description,price}=service
     return (
         <div>
-              <div  data-aos="zoom-out"  data-aos-easing="ease-out-cubic"  data-aos-duration="2000" className="card w-96 bg-base-100 shadow-xl">
-  <figure><img className='w-full h-[300px]' src={img} alt="Shoes" /></figure>
+              <div  data-aos="zoom-out"  data-aos-easing="ease-out-cubic"  data-aos-duration="2000" className="card lg:w-96 w-[90%] mx-auto lg:mx-0 bg-base-100 shadow-xl">
+  <figure><img className='w-full h-[300px]' src={img}/></figure>
   <div className="card-body">
     <h2 className='font-bold'>{name}</h2>
     <h2 className="card-title">{title}</h2>

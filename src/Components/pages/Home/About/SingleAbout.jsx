@@ -6,7 +6,7 @@ const SingleAbout = ({about}) => {
         <div data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000">
-             <div className='border-2 border-gray-400 bg-pink-100 rounded-lg w-[50%] mx-auto flex justify-between items-center mb-4'>
+             <div className='border-2 border-gray-400 bg-pink-100 rounded-lg w-[90%] lg:w-[50%] mx-auto flex justify-between items-center mb-4'>
                 <div>
                      <img  className='rounded-full p-5' src={img} alt="" />
                 </div>

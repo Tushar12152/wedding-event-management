@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useContextApiHook from "../../../Custom Hooks/useContextApiHook";
 import { FcGoogle } from 'react-icons/fc';
+import {FaGithub } from 'react-icons/fa';
 
 
 
@@ -13,17 +14,20 @@ const Login = () => {
   const location=useLocation()
   // console.log(location)
     const [showPassword,setShowPassword]=useState(true)
-    const{login,googleSignUp}=useContextApiHook()
-const navigate=useNavigate()
+    const{login,googleSignUp,githubSignUp}=useContextApiHook()
+  const navigate=useNavigate()
     
 
-const handleGoogleSignUp=(item)=>{
+const handlePopUp=(item)=>{
   item()
   .then((result)=>{
     console.log(result.user)
+    navigate(location?.state? location.state:'/')
+    swal( "You are signed up! ", "success");
   })
   .catch(error=>{
     console.log(error.message)
+    swal("Error!", `${error}`, "error");
   })
 }
 
@@ -81,7 +85,11 @@ const handleGoogleSignUp=(item)=>{
         </div>
         <div>
              <p className="text-center font-semibold border-b-2 py-2">Sign Up with</p>
-             <button onClick={()=>handleGoogleSignUp(googleSignUp)} className="p-2 text-2xl"><FcGoogle></FcGoogle></button>
+             <div>
+                      <button onClick={()=>handlePopUp(googleSignUp)} className="p-2 text-2xl ml-16"><FcGoogle></FcGoogle></button>
+
+                      <button onClick={()=>handlePopUp(githubSignUp)} className="p-2 text-2xl"><FaGithub></FaGithub></button>
+             </div>
         </div>
       </form>
     </div>
