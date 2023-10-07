@@ -7,6 +7,7 @@ import Register from "../Components/pages/Register/Register";
 import Login from "../Components/pages/Login/Login";
 import ViewDetail from './../Components/pages/detail/ViewDetail';
 import Purchase from "../Components/pages/Purchase/purchase";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Router =createBrowserRouter([
     {
@@ -21,11 +22,15 @@ const Router =createBrowserRouter([
             },
             {
                 path:'/wedding',
-                element:<Wedding></Wedding>
+                element:<PrivateRoute>
+                            <Wedding></Wedding>
+                      </PrivateRoute>
             },
             {
                 path:'/purchase',
-                element:<Purchase></Purchase>
+                element:<PrivateRoute>
+                    <Purchase></Purchase>
+                </PrivateRoute>
             },
             {
                 path:'/register',
@@ -37,7 +42,9 @@ const Router =createBrowserRouter([
             },
             {
                 path:'/detail/:id',
-                element:<ViewDetail></ViewDetail>,
+                element:<PrivateRoute>
+                            <ViewDetail></ViewDetail>
+                        </PrivateRoute>,
                 loader:()=>fetch('/service.json')
 
             }

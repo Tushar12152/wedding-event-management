@@ -3,16 +3,28 @@ import { AiFillEyeInvisible,AiFillEye } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import swal from 'sweetalert';
+import useContextApiHook from './../../../Custom Hooks/useContextApiHook';
 
 const Register = () => {
     const [showPassword,setShowPassword]=useState(true)
+    const {createUser}=useContextApiHook()
     
     const handleRegister=e=>{
         e.preventDefault()
         const email=e.target.email.value;
         const password=e.target.password.value;
         if(/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)){
-            console.log(email,password)
+            // console.log(email,password)
+            createUser(email,password)
+            .then(()=>{
+                    
+                     swal("WOW!", "Your registration Successfully compleate! go to LogIn", "success");
+            })
+            .catch(error=>{
+              // console.log(error)
+              swal("Error!", `${error}`, "error");
+            })
         }
       else{
       toast('Password will be minimum 6 charecter ,munimum have 1 capital later and 1 special charecter')

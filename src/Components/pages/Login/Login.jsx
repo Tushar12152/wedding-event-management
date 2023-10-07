@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { AiFillEyeInvisible,AiFillEye } from 'react-icons/ai';
-import { Link } from "react-router-dom";
+import swal from 'sweetalert';
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useContextApiHook from "../../../Custom Hooks/useContextApiHook";
 
 const Login = () => {
+  const location=useLocation()
+  // console.log(location)
     const [showPassword,setShowPassword]=useState(true)
+    const{login}=useContextApiHook()
+const navigate=useNavigate()
     
     const handleLogin=e=>{
         e.preventDefault()
@@ -13,6 +19,14 @@ const Login = () => {
         const password=e.target.password.value;
         if(/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)){
             console.log(email,password)
+            login(email,password)
+            .then(()=>{
+              swal("WOW!", "You are Successfully login! ", "success");
+              navigate(location?.state? location.state:'/')
+            })
+            .catch(error=>{
+              swal("Error!", `${error}`, "error");
+            })
         }
       else{
       toast('Password will be minimum 6 charecter ,munimum have 1 capital later and 1 special charecter')

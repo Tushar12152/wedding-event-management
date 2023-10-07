@@ -1,6 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import useContextApiHook from "../../Custom Hooks/useContextApiHook";
+import swal from 'sweetalert';
 
 const Nav = () => {
+   const navigate=useNavigate()
+  const {user,logOut}=useContextApiHook()
+  // console.log(user)
+  // const{photoURL,email}=user
+  // console.log(photoURL,email)
+
+  const signOut=()=>[
+    logOut()
+    .then(()=>{
+       navigate('/login')
+    })
+    .catch(error=>{
+      swal("Error!", `${error}`, "error");
+
+    })
+  ]
+
     const navlinks=<div className="flex  gap-6">
             <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-red-600 underline" : ""}>HOME</NavLink>
 
@@ -34,7 +53,13 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    {
+      user?<div>
+        <button onClick={signOut} className="btn bg-pink-200">LogOut</button>
+
+      </div>
+      :<Link to='/login' className="btn bg-pink-200">LogIn</Link>
+    }
   </div>
 </div>
         </div>
