@@ -5,9 +5,9 @@ import swal from 'sweetalert';
 const Nav = () => {
    const navigate=useNavigate()
   const {user,logOut}=useContextApiHook()
+  
   // console.log(user)
-  // const{photoURL,email}=user
-  // console.log(photoURL,email)
+ 
 
   const signOut=()=>[
     logOut()
@@ -35,7 +35,7 @@ const Nav = () => {
        
 
         <div className="bg-base-300 py-5">
-            <div className="navbar w-[90%] mx-auto ">
+            <div className="navbar w-[98%] mx-auto ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,8 +54,14 @@ const Nav = () => {
   </div>
   <div className="navbar-end">
     {
-      user?<div>
+      user?<div className="flex gap-1">
+            {user?.photoURL&&  <img className="w-12 rounded-full"  src={user?.photoURL}  alt="" /> }
+      
+       <div  className="flex gap-2 items-center">
+       <p className="bg-yellow-300 ">{user?.email}</p>
+    
         <button onClick={signOut} className="btn bg-pink-200">LogOut</button>
+       </div>
 
       </div>
       :<Link to='/login' className="btn bg-pink-200">LogIn</Link>

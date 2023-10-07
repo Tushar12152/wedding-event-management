@@ -5,14 +5,28 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useContextApiHook from "../../../Custom Hooks/useContextApiHook";
+import { FcGoogle } from 'react-icons/fc';
+
+
 
 const Login = () => {
   const location=useLocation()
   // console.log(location)
     const [showPassword,setShowPassword]=useState(true)
-    const{login}=useContextApiHook()
+    const{login,googleSignUp}=useContextApiHook()
 const navigate=useNavigate()
     
+
+const handleGoogleSignUp=(item)=>{
+  item()
+  .then((result)=>{
+    console.log(result.user)
+  })
+  .catch(error=>{
+    console.log(error.message)
+  })
+}
+
     const handleLogin=e=>{
         e.preventDefault()
         const email=e.target.email.value;
@@ -56,7 +70,7 @@ const navigate=useNavigate()
           </label>
          <div className="relative">
          <input type={showPassword?"text":"password"} name="password" placeholder="password" className="input input-bordered w-full" required />
-         <span className="absolute top-4 right-1" onClick={()=>setShowPassword(!showPassword)}>{showPassword?<AiFillEyeInvisible></AiFillEyeInvisible>:<AiFillEye></AiFillEye>}</span>
+         <span className="absolute top-4 right-1" onClick={()=>setShowPassword(!showPassword)}>{showPassword?<AiFillEye></AiFillEye>:<AiFillEyeInvisible></AiFillEyeInvisible>}</span>
          </div>
           <label className="label">
             <p>New Here? please <Link className="text-blue-400" to='/register'>Register</Link></p>
@@ -64,6 +78,10 @@ const navigate=useNavigate()
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
+        </div>
+        <div>
+             <p className="text-center font-semibold border-b-2 py-2">Sign Up with</p>
+             <button onClick={()=>handleGoogleSignUp(googleSignUp)} className="p-2 text-2xl"><FcGoogle></FcGoogle></button>
         </div>
       </form>
     </div>

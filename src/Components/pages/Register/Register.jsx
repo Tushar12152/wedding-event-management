@@ -23,7 +23,7 @@ const Register = () => {
             })
             .catch(error=>{
               // console.log(error)
-              swal("Error!", `${error}`, "error");
+              swal("Error!", `${error.message}`, "error");
             })
         }
       else{
@@ -54,7 +54,7 @@ const Register = () => {
           </label>
          <div className="relative">
          <input type={showPassword?"text":"password"} name="password" placeholder="password" className="input input-bordered w-full" required />
-         <span className="absolute top-4 right-1" onClick={()=>setShowPassword(!showPassword)}>{showPassword?<AiFillEyeInvisible></AiFillEyeInvisible>:<AiFillEye></AiFillEye>}</span>
+         <span className="absolute top-4 right-1" onClick={()=>setShowPassword(!showPassword)}>{showPassword?<AiFillEye></AiFillEye>:<AiFillEyeInvisible></AiFillEyeInvisible>}</span>
          </div>
           <label className="label">
             <p>Already have an account? please <Link className="text-blue-400" to='/Login'>Login</Link></p>
