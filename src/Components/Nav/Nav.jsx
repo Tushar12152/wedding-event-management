@@ -6,7 +6,7 @@ const Nav = () => {
    const navigate=useNavigate()
   const {user,logOut}=useContextApiHook()
   
-  // console.log(user)
+  console.log(user)
 
  
 
@@ -59,7 +59,7 @@ const Nav = () => {
             {user?.photoURL&&  <img className="w-12 rounded-full"  src={user?.photoURL}  alt="" /> }
       
        <div  className="flex gap-2 items-center">
-       <p className="bg-yellow-300 ">{user?.email}</p>
+       <p className="bg-yellow-300 ">{user?.displayName||user?.email}</p>
     
         <button onClick={signOut} className="btn bg-pink-200">LogOut</button>
        </div>

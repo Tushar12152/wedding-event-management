@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "wedding-event-management-f2d82",
   storageBucket: "wedding-event-management-f2d82.appspot.com",
   messagingSenderId: "869193857109",
-  appId: "1:869193857109:web:cdeb7a08a773d11cb13cdc"
+  appId: "1:869193857109:web:cdeb7a08a773d11cb13cdc",
 };
 
 // Initialize Firebase
