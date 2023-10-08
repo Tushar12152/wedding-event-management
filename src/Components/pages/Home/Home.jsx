@@ -26,7 +26,7 @@ const Home = () => {
   
                <h1 className="text-center font-bold text-4xl  py-20">About Us</h1>
                <About></About>
-               <h1 className="text-center font-bold text-4xl  py-20">Gallary</h1>
+               <h1 className="text-center font-bold text-4xl  py-20">Gallery</h1>
                 <Gallary></Gallary>
 
               
