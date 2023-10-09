@@ -8,7 +8,7 @@ const Service = ({service}) => {
     return (
         <div>
            
-              <div  data-aos="zoom-out"  data-aos-easing="ease-out-cubic"  data-aos-duration="2000" className="card lg:w-96 w-[90%] mx-auto lg:mx-0 bg-base-100 shadow-xl">
+              <div  data-aos="zoom-out"  data-aos-easing="ease-out-cubic"  data-aos-duration="2000" className="card lg:w-96 w-[80%] mx-auto lg:mx-0 bg-base-100 shadow-xl">
   <figure><img className='w-full h-[300px]' src={img}/></figure>
   <div className="card-body">
     <h2 className='font-bold'>{name}</h2>

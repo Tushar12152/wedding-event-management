@@ -9,7 +9,7 @@ const Gallary = () => {
                  <img   data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1500" className="w-full h-[450px] rounded-md" src="https://i.ibb.co/fH2DPZP/download.jpg" alt="" />
-                 <img   data-aos="fade-left"
+                 <img   data-aos="fade-right"
         data-aos-easing="linear"
         data-aos-duration="1500" className="w-full h-[450px] rounded-md" src="https://i.ibb.co/brg6nWR/download.jpg" alt="" />
                  <img  data-aos="flip-left"
